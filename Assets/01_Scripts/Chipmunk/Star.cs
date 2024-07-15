@@ -18,7 +18,7 @@ public class Star : MonoBehaviour
     public void Get(StarGetter starGetter, StarStorage starStorage)
     {
         IsGetting = true;
-        this.transform.DOMove(transform.position, starGetter._getTime).OnComplete(() =>
+        this.transform.DOMove(starGetter.transform.position, starGetter._getTime).SetEase(Ease.InCubic).OnComplete(() =>
         {
             starStorage.StoreStar(this);
             IsGetting = false;

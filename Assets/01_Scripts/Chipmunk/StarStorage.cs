@@ -16,6 +16,11 @@ public class StarStorage : MonoBehaviour
     }
     public Star TakeOutStar()
     {
+        if(_stars.Count == 0)
+        {
+            Debug.LogWarning("StarStorage : Star is empty");
+            return null;
+        }
         Star star = _stars.Pop();
         star.gameObject.SetActive(true);
         StarCountChanged?.Invoke(StarCount);

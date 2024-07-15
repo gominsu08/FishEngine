@@ -15,10 +15,17 @@ public class StarShooter : MonoBehaviour
     private void Update() {
         if(Input.GetKeyDown(KeyCode.F))
         {
-            Star star = _starStorage.TakeOutStar();
-            star.transform.position = transform.position;
-            Vector2 shootDir = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - star.transform.position).normalized;
-            star.Shoot(shootDir, shootPower);
+            ShootStar();
         }
+    }
+
+    private void ShootStar()
+    {
+        Star star = _starStorage.TakeOutStar();
+        if(star == null)
+            return;
+        star.transform.position = transform.position;
+        Vector2 shootDir = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - star.transform.position).normalized;
+        star.Shoot(shootDir, shootPower);
     }
 }
