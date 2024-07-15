@@ -1064,7 +1064,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 17
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1604,7 +1604,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 5
+      m_TileSpriteIndex: 16
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -6564,7 +6564,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 7
+      m_TileSpriteIndex: 15
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -7104,7 +7104,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 14
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -7117,24 +7117,42 @@ Tilemap:
   - m_RefCount: 605
     m_Data: {fileID: 11400000, guid: 130d10eca9457b4408acac0ff8c51605, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: -102925756, guid: 2462cd58fdddf0a4499290fcc0d0f659, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 218499367, guid: 2462cd58fdddf0a4499290fcc0d0f659, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 53
     m_Data: {fileID: 2055697992, guid: 2462cd58fdddf0a4499290fcc0d0f659, type: 3}
   - m_RefCount: 9
     m_Data: {fileID: -1746763242, guid: 2462cd58fdddf0a4499290fcc0d0f659, type: 3}
   - m_RefCount: 477
     m_Data: {fileID: 1642436517, guid: 2462cd58fdddf0a4499290fcc0d0f659, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -348070827, guid: 2462cd58fdddf0a4499290fcc0d0f659, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 9
     m_Data: {fileID: 1182119011, guid: 2462cd58fdddf0a4499290fcc0d0f659, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 2027932930, guid: 2462cd58fdddf0a4499290fcc0d0f659, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 53
     m_Data: {fileID: 4780450, guid: 2462cd58fdddf0a4499290fcc0d0f659, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -102925756, guid: 2462cd58fdddf0a4499290fcc0d0f659, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 2027932930, guid: 2462cd58fdddf0a4499290fcc0d0f659, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -348070827, guid: 2462cd58fdddf0a4499290fcc0d0f659, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 218499367, guid: 2462cd58fdddf0a4499290fcc0d0f659, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 605
     m_Data:
@@ -7154,14 +7172,52 @@ Tilemap:
       e31: 0
       e32: 0
       e33: 1
+  - m_RefCount: 0
+    m_Data:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: -1.2850118e-37
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 6.7e-44
+      e20: 0
+      e21: 0
+      e22: 4.1819162e+30
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 4.5904e-41
+      e33: 0
+  - m_RefCount: 0
+    m_Data:
+      e00: 0
+      e01: 0
+      e02: 0
+      e03: -1.2850118e-37
+      e10: 0
+      e11: 0
+      e12: 0
+      e13: 6.7e-44
+      e20: 0
+      e21: 0
+      e22: 4.1819162e+30
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 4.5904e-41
+      e33: 0
   m_TileColorArray:
   - m_RefCount: 605
     m_Data: {r: 1, g: 1, b: 1, a: 1}
+  - m_RefCount: 0
+    m_Data: {r: 5.9634e-41, g: 5.9634e-41, b: 5.9634e-41, a: 5.9634e-41}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -25, y: -15, z: 0}
-  m_Size: {x: 55, y: 15, z: 1}
+  m_Origin: {x: -25, y: -39, z: 0}
+  m_Size: {x: 57, y: 39, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
