@@ -94,7 +94,7 @@ public class LightSliderObject : MonoBehaviour
     {
 
         SpriteRenderer render = _lightLevelBlockList[index].gameObject.GetComponent<SpriteRenderer>();
-        render.DOFade(1, 1);
+        render.DOFade(1, 0.3f);
         StartCoroutine(SetFalseObject(index, false));
         //Image renderUI = _lightLevelBlockList[index].gameObject.GetComponent<Image>();
         //renderUI.DOFade(1, 1);
@@ -103,7 +103,7 @@ public class LightSliderObject : MonoBehaviour
     private void FadeHide(int index)
     {
         SpriteRenderer render = _lightLevelBlockList[index].gameObject.GetComponent<SpriteRenderer>();
-        render.DOFade(0, 1);
+        render.DOFade(0, 0.3f);
         StartCoroutine(SetFalseObject(index, true));
         //Image renderUI = _lightLevelBlockList[index].gameObject.GetComponent<Image>();
         //renderUI.DOFade(0, 1);
