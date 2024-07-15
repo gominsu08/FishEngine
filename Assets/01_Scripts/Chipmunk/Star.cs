@@ -18,11 +18,26 @@ public class Star : MonoBehaviour
     public void Get(StarGetter starGetter, StarStorage starStorage)
     {
         IsGetting = true;
-        this.transform.DOMove(starGetter.transform.position, starGetter._getTime).SetEase(Ease.InCubic).OnComplete(() =>
+        StartCoroutine(GetCoroutine(starGetter, starStorage));
+        // this.transform.DOMove(starGetter.transform.position, starGetter._getTime).SetEase(Ease.InCubic).OnComplete(() =>
+        // {
+        //     starStorage.StoreStar(this);
+        //     IsGetting = false;
+        // });
+    }
+    private IEnumerator GetCoroutine(StarGetter starGetter, StarStorage starStorage)
+    {
+        float time = starGetter._getTime;
+        float currenTime = 0;
+        while (currenTime <= time)
         {
-            starStorage.StoreStar(this);
-            IsGetting = false;
-        });
+            currenTime += Time.deltaTime;
+            float t = currenTime / time;
+            transform.position = Vector3.Lerp(transform.position, starGetter.transform.position, t * t * t);
+            yield return null;
+        }
+        starStorage.StoreStar(this);
+        IsGetting = false;
     }
 
     private IEnumerator ShootingCoroutine()
