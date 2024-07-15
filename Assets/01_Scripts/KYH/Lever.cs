@@ -8,25 +8,25 @@ public class Lever : MonoBehaviour , IInterection
 {
     private Animator animator;
     public UnityEvent leverOnEvent;
-    private SpriteRenderer inputBullun;//도움 말풍선
+    public GameObject inputBullun;//도움 말풍선
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        inputBullun = GetComponentInChildren<SpriteRenderer>();
+        inputBullun.SetActive(false);
         Debug.Log(inputBullun.name);
     }
     public void Interection()
     {
+        gameObject.GetComponent<Collider2D>().enabled = false;
         leverOnEvent?.Invoke();
         animator.SetBool("On", true);
+        inputBullun.SetActive(false);
     }
 
     public void InputHelp()
     {
-        inputBullun.DOFade(1, 0.1f);
+        Debug.Log("실행");
+        inputBullun.SetActive(true);
     }
-    public void InputHelpOut()
-    {
-        inputBullun.DOFade(0, 0.1f);
-    }
+
 }

@@ -14,5 +14,6 @@ public class DoorsOpen : MonoBehaviour
     public void Open()
     {
         animator.SetBool("Open", true);
+        gameObject.GetComponent<Collider2D>().enabled = false;
     }
 }

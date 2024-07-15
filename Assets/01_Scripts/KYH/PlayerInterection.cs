@@ -6,7 +6,6 @@ public interface IInterection
 {
     public void InputHelp();
     public void Interection();
-    public void InputHelpOut();
 }
 
 public class PlayerInterection : MonoBehaviour
@@ -28,7 +27,6 @@ public class PlayerInterection : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 interectiveObj?.Interection();
-                interectiveObj.InputHelpOut();
             }
         }
     }
