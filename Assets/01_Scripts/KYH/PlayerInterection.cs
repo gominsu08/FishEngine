@@ -4,7 +4,9 @@ using UnityEngine;
 
 public interface IInterection
 {
+    public void InputHelp();
     public void Interection();
+    public void InputHelpOut();
 }
 
 public class PlayerInterection : MonoBehaviour
@@ -19,10 +21,15 @@ public class PlayerInterection : MonoBehaviour
     {
         Collider2D collision = Physics2D.OverlapCircle(transform.position, attackRadius, whatIsPlayer); //하나 가져오기
                                                                                                         //All 은 안에 있는 거 모두다 배열로
-        if (collision && Input.GetKeyDown(KeyCode.E))
+        if (collision)
         {
-            var lever = collision.GetComponent<IInterection>();
-            lever?.Interection();
+            var interectiveObj = collision.GetComponent<IInterection>();
+            interectiveObj.InputHelp();
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                interectiveObj?.Interection();
+                interectiveObj.InputHelpOut();
+            }
         }
     }
 }
