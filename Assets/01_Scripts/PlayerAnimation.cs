@@ -19,15 +19,16 @@ public class PlayerAnimation : MonoBehaviour
     void Update()
     {
         Debug.Log(playerInput.MoveDir);
-        if(playerInput.MoveDir.magnitude == 1)
-        {
-            animator.SetBool(walkHash, true);
-            spriteRenderer.flipX = false;
-        }
-        else if(playerInput.MoveDir.x < 0)
+
+        if(playerInput.MoveDir.x < 0)
         {
             spriteRenderer.flipX = true;
             animator.SetBool(walkHash, true);
+        }
+        else if (playerInput.MoveDir.magnitude > 0.1)
+        {
+            animator.SetBool(walkHash, true);
+            spriteRenderer.flipX = false;
         }
         else
         {
