@@ -11,6 +11,6 @@ public class Lever : MonoBehaviour , IInterection
     }
     public void Interection()
     {
-
+        //animator
     }
 }
