@@ -8,7 +8,7 @@ public class PlayerInput : MonoBehaviour
     public Vector2 MoveDir { get; private set; }
 
     public static bool stop;
-
+    public Action OnJump;
     public event Action OnFire;
 
     private void Update()

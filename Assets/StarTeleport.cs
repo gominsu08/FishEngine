@@ -4,27 +4,16 @@ using UnityEngine;
 
 public class StarTeleport : MonoBehaviour
 {
-    [SerializeField]
-    private Vector2 attackRadius;
-    [SerializeField]
-    private LayerMask whatIsStar;
+
     [SerializeField]
     private Transform reSpawnTrans;
 
-    private void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Collider2D star = Physics2D.OverlapBox(transform.position, attackRadius, whatIsStar); //하나 가져오기
-                                                                                                            //All 은 안에 있는 거 모두다 배열로
-        if (star)
+        if (collision.CompareTag("Star") || collision.CompareTag("Player"))
         {
-            var starTrans = star.GetComponent<Transform>();
-            starTrans.position = reSpawnTrans.position;
+            collision.transform.position = reSpawnTrans.position;
         }
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawCube(transform.position, attackRadius);
-    }
 }
