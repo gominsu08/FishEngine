@@ -323,9 +323,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 776704f09d9c41f4e8047dd8129df912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endTransform: {fileID: 937893890}
-  startTransform: {fileID: 224501878}
-  playerTransform: {fileID: 399450460}
   inputBullun:
   - {fileID: 1267965446}
   - {fileID: 685919147}
@@ -3987,7 +3984,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1731835681
 MonoBehaviour:
   m_ObjectHideFlags: 0
