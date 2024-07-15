@@ -21,7 +21,7 @@ public class LightSliderObject : MonoBehaviour
     //[SerializeField, ColorUsage(showAlpha:false, hdr:true)]
     //private Color color;
 
-    [SerializeField] private string str; //¹è¿ì±â
+    [SerializeField] private string str; //ï¿½ï¿½ï¿½ï¿½
 
 
     public bool SliderOn
@@ -39,7 +39,7 @@ public class LightSliderObject : MonoBehaviour
 
     private void Awake()
     {
-        slider.interactable = true; //½½¶óÀÌ´õÀÇ »óÈ£ÀÛ¿ë ¿©ºÎ
+        slider.interactable = true; //ï¿½ï¿½ï¿½ï¿½ï¿½Ì´ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½Û¿ï¿½ ï¿½ï¿½ï¿½ï¿½
         GetComponentsInChildren(_lightLevelBlockList);
     }
 
