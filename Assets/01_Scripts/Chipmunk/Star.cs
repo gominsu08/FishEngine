@@ -6,6 +6,8 @@ using DG.Tweening;
 
 public class Star : MonoBehaviour
 {
+    [SerializeField]
+    TrailRenderer trailRenderer;
     public Rigidbody2D rigidbodyCompo { get; private set; }
     public bool IsShooting { get; private set; } = false;
     public bool IsGetting { get; private set; } = false;
@@ -42,6 +44,7 @@ public class Star : MonoBehaviour
 
     private IEnumerator ShootingCoroutine()
     {
+        trailRenderer.Clear();
         yield return new WaitForSeconds(1f);
         IsShooting = false;
         // while(IsShooting)
