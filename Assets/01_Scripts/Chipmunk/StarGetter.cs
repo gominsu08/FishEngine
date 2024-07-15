@@ -6,7 +6,7 @@ public class StarGetter : MonoBehaviour
 {
     [SerializeField] StarStorage _starStorage;
     [SerializeField] ContactFilter2D _contactFilter;
-    [SerializeField] float _getTime = 0.5f;
+    [SerializeField] public float _getTime = 0.5f;
     [SerializeField] float _getRadius = 0.1f;
     private void Awake()
     {
@@ -21,9 +21,9 @@ public class StarGetter : MonoBehaviour
         foreach (var col in collider)
         {
             Star star = col.GetComponent<Star>();
-            if (star != null)
+            if (star != null && !star.IsShooting && !star.IsGetting)
             {
-                star.transform.DOMove(transform.position, _getTime).OnComplete(() => _starStorage.StoreStar(star));
+                star.Get(this, _starStorage);
             }
         }
     }
