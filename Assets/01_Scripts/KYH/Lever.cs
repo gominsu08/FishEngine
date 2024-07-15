@@ -13,7 +13,6 @@ public class Lever : MonoBehaviour , IInterection
     {
         animator = GetComponent<Animator>();
         inputBullun.SetActive(false);
-        Debug.Log(inputBullun.name);
     }
     public void Interection()
     {

@@ -29,5 +29,9 @@ public class PlayerInterection : MonoBehaviour
                 interectiveObj?.Interection();
             }
         }
+        else
+        {
+            print("null¿”");
+        }
     }
 }
